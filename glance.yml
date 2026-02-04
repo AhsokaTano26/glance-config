@@ -1,0 +1,99 @@
+server:
+  port: 8080
+
+theme:
+  background-color: "hsl(210, 17%, 98%)"
+  primary-color: "hsl(0, 0%, 10%)"
+  contrast-multiplier: 1.0
+
+pages:
+  - name: Home
+    columns:
+      # --- 第一列：实用工具 ---
+      - size: small
+        widgets:
+          - type: search
+            title: 搜索
+            placeholder: 搜点什么...
+            engine: google
+
+          - type: calendar
+
+          - type: weather
+            location: Chongqing, China
+            unit: metric
+
+          - type: extension
+            title: 系统负载
+            url: http://172.17.0.1:8080/api/system
+
+      # --- 第二列：信息流 (主区域) ---
+      - size: full
+        widgets:
+          - type: rss
+            title: 科技 & 资讯
+            limit: 5
+            feeds:
+              - url: https://sspai.com/feed
+                title: 少数派
+              - url: https://v2ex.com/index.xml
+                title: V2EX
+              - url: https://rsshub.app/pnas/news
+                title: PNAS News
+
+          - type: rss
+            title: 实时热榜
+            limit: 5
+            feeds:
+              - url: https://rsshub.app/weibo/search/hot
+                title: 微博热搜
+              - url: https://rsshub.app/zhihu/hotlist
+                title: 知乎热榜
+
+          - type: rss
+            title: 每日必应
+            limit: 1
+            feeds:
+              - url: https://rsshub.app/bing
+                title: Bing Wallpaper
+
+      # --- 第三列：监控与导航 ---
+      - size: small
+        widgets:
+          - type: bookmarks
+            title: 常用导航
+            groups:
+              - title: 社区
+                links:
+                  - title: GitHub
+                    url: https://github.com
+                  - title: Tano Asia
+                    url: https://www.tano.asia
+              - title: 娱乐
+                links:
+                  - title: Bilibili
+                    url: https://www.bilibili.com
+
+          - type: monitor
+            title: 金融行情
+            sites:
+              - title: "₿ BTC/USDT"
+                url: https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDT
+              - title: "Ξ ETH/USDT"
+                url: https://api.binance.com/api/v3/ticker/price?symbol=ETHUSDT
+
+          - type: monitor
+            title: 网络连通性
+            sites:
+              - title: 百度
+                url: https://www.baidu.com
+              - title: GitHub
+                url: https://github.com
+
+# 自定义圆角和边框样式
+custom_css: |
+  .widget {
+    border-radius: 10px;
+    border: 1px solid hsl(0, 0%, 90%);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  }
