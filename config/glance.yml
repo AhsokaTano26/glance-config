@@ -12,3 +12,4 @@ pages:
   - $include: home.yml
   - $include: tech.yml
   - $include: media.yml
+  - $include: nsy.yml
