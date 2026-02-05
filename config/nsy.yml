@@ -14,7 +14,7 @@
         # --- 爱美 ---
         - type: rss
           title: "Twitter / 爱美 (Aimi)"
-          limit: 2
+          limit: 3
           feeds:
             - url: https://rsshub-back.tano.asia/twitter/user/aimi_sound
               title: "@aimi_sound"
@@ -22,7 +22,7 @@
         # --- Ayasa (岛村绚沙) ---
         - type: rss
           title: "Twitter / Ayasa"
-          limit: 2
+          limit: 3
           feeds:
             - url: https://rsshub-back.tano.asia/twitter/user/Ayasa_violin
               title: "@Ayasa_violin"
@@ -30,7 +30,7 @@
         # --- 中岛由贵 (Yuki) ---
         - type: rss
           title: "Twitter / 中岛由贵"
-          limit: 2
+          limit: 3
           feeds:
             - url: https://rsshub-back.tano.asia/twitter/user/Yuki_Nakashim
               title: "@Yuki_Nakashim"
@@ -38,7 +38,7 @@
         # --- 相羽爱奈 (Aiba Aiai) ---
         - type: rss
           title: "Twitter / 相羽あいな"
-          limit: 2
+          limit: 3
           feeds:
             - url: https://rsshub-back.tano.asia/twitter/user/aibaaiai
               title: "@aibaaiai"
@@ -46,7 +46,7 @@
         # --- 工藤晴香 (Kdhr) ---
         - type: rss
           title: "Twitter / 工藤晴香"
-          limit: 2
+          limit: 3
           feeds:
             - url: https://rsshub-back.tano.asia/twitter/user/kudoharuka910
               title: "@kudoharuka910"
