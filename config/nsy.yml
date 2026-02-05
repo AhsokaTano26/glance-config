@@ -1,0 +1,68 @@
+- name: nsy
+  columns:
+    - size: small
+      widgets:
+        - type: clock
+          timezone: Asia/Tokyo
+          title: 东京时间
+        - type: calendar
+        - type: weather
+          location: Tokyo, Japan
+
+    - size: full
+      widgets:
+        # --- 爱美 ---
+        - type: rss
+          title: "Twitter / 爱美 (Aimi)"
+          limit: 2
+          feeds:
+            - url: https://rsshub.tano.asia/twitter/user/aimi_sound
+              title: "@aimi_sound"
+
+        # --- Ayasa (岛村绚沙) ---
+        - type: rss
+          title: "Twitter / Ayasa"
+          limit: 2
+          feeds:
+            - url: https://rsshub.tano.asia/twitter/user/Ayasa_violin
+              title: "@Ayasa_violin"
+
+        # --- 中岛由贵 (Yuki) ---
+        - type: rss
+          title: "Twitter / 中岛由贵"
+          limit: 2
+          feeds:
+            - url: https://rsshub.tano.asia/twitter/user/Yuki_Nakashim
+              title: "@Yuki_Nakashim"
+
+        # --- 相羽爱奈 (Aiba Aiai) ---
+        - type: rss
+          title: "Twitter / 相羽あいな"
+          limit: 2
+          feeds:
+            - url: https://rsshub.tano.asia/twitter/user/aibaaiai
+              title: "@aibaaiai"
+
+        # --- 工藤晴香 (Kdhr) ---
+        - type: rss
+          title: "Twitter / 工藤晴香"
+          limit: 2
+          feeds:
+            - url: https://rsshub.tano.asia/twitter/user/kudoharuka910
+              title: "@kudoharuka910"
+
+    - size: small
+      widgets:
+        - type: bookmarks
+          title: 快速链接
+          groups:
+            - title: 常用
+              links:
+                - title: Twitter (X)
+                  url: https://twitter.com
+                - title: Bilibili 动态
+                  url: https://t.bilibili.com
+            - title: 资料
+              links:
+                - title: Roselia 官网
+                  url: https://roselia-official.jp/
