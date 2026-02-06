@@ -2,8 +2,8 @@ server:
   assets-path: /app/assets
 
 theme:
-  background-color: "#0f0f12"
-  primary-color: "#d4af37"
+  background-color: "hsl(240, 10%, 4%)"
+  primary-color: "hsl(45, 64%, 52%)"
   contrast-multiplier: 1.1
   custom-css-file: /assets/user.css
 
