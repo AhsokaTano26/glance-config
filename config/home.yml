@@ -1,14 +1,14 @@
 - name: Home
   # Optionally, if you only have a single page you can hide the desktop navigation for a cleaner look
   # hide-desktop-navigation: true
-  search:
-    action: https://www.bing.com/search
-    placeholder: "Search with Bing..."
-    method: get
-    parameter: q
   columns:
     - size: small
       widgets:
+        - type: search
+          title: 搜索
+          placeholder: 搜点什么...
+          engine: bing
+
         - type: calendar
           first-day-of-week: monday
 

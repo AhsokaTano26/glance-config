@@ -1,99 +1,96 @@
+/* --- 1. 全局背景与字体 --- */
 body {
-    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%) fixed; /* 梦幻渐变背景 */
-}
-.widget {
-    background: rgba(255, 255, 255, 0.4) !important;
-    backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    border-radius: 20px !important;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
-}
-
-/* 优化卡片外观 */
-.widget {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(0, 0, 0, 0.05) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
-}
-
-/* 统一字体风格 */
-body {
+    /* 渐变黑背景：从深墨色到纯黑的径向渐变，比纯黑更有深度 */
+    background: radial-gradient(circle at top, #1c1c21 0%, #0a0a0c 100%) fixed !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-}
-/* 让 RSS 中的推特图片圆角并自适应宽度 */
-.widget-rss-item-content img {
-    border-radius: 10px !important;
-    margin-top: 8px !important;
-    max-width: 100% !important;
-    height: auto !important;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #e0e0e0;
 }
 
-/* 调整卡片间距，看起来不拥挤 */
+/* --- 2. 核心卡片 (Widget) 美化 --- */
 .widget {
+    /* 深色半透明，配合金色边框 */
+    background: rgba(30, 30, 35, 0.7) !important;
+    backdrop-filter: blur(16px) saturate(150%);
+    border: 1px solid rgba(212, 175, 55, 0.2) !important; /* 极细的暗金色边框 */
+    border-radius: 16px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
     margin-bottom: 1.5rem !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 针对多页面导航栏的优化 */
-.header-tabs {
-    border-bottom: none !important;
-    margin-bottom: 1.5rem !important;
-}
-
-.header-tab {
-    font-weight: 600 !important;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    opacity: 0.6;
-    transition: all 0.3s ease;
-}
-
-.header-tab.active {
-    opacity: 1;
-    color: var(--primary-color) !important;
-    border-bottom: 2px solid var(--primary-color) !important;
-}
-
-/* 优化推特文字排版 */
-.widget-rss-item-title {
-    font-size: 0.95rem !important;
-    line-height: 1.4 !important;
-    font-weight: 500 !important;
-    color: #1a1a1a !important; /* 让推特正文更清晰 */
-}
-
-/* 鼠标悬停卡片时的浮动效果 */
+/* 鼠标悬停：金色加亮并上浮 */
 .widget:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
-    transition: all 0.2s ease-in-out;
+    transform: translateY(-5px);
+    border: 1px solid rgba(212, 175, 55, 0.6) !important;
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.1) !important;
 }
-/* 搜索栏容器 */
+
+/* --- 3. 搜索栏：金边胶囊设计 --- */
 .search-form {
-    margin-bottom: 2rem !important;
+    margin-bottom: 2.5rem !important;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* 搜索输入框 */
 .search-bar-input {
-    background: rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(0, 0, 0, 0.1) !important;
-    border-radius: 24px !important; /* 椭圆效果，像 Bing 官网一样 */
-    padding: 12px 24px !important;
+    border: 1px solid rgba(212, 175, 55, 0.3) !important;
+    border-radius: 30px !important;
+    padding: 14px 28px !important;
     font-size: 1rem !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    color: #d4af37 !important; /* 输入文字为金色 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
     transition: all 0.3s ease;
 }
 
-/* 选中状态 */
 .search-bar-input:focus {
-    background: rgba(255, 255, 255, 0.9) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-    border-color: var(--primary-color) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: #d4af37 !important;
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.2) !important;
     outline: none;
+}
+
+/* --- 4. 导航栏优化 --- */
+.header-tabs {
+    border-bottom: none !important;
+    margin-bottom: 2rem !important;
+}
+
+.header-tab {
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5) !important;
+    transition: all 0.3s ease;
+}
+
+.header-tab.active {
+    color: #d4af37 !important; /* 激活页面为金色 */
+    border-bottom: 2px solid #d4af37 !important;
+    opacity: 1;
+}
+
+/* --- 5. RSS 与推特图片优化 --- */
+.widget-rss-item-title {
+    font-size: 0.95rem !important;
+    line-height: 1.5 !important;
+    font-weight: 500 !important;
+    color: #ffffff !important; /* 标题设为纯白，方便阅读 */
+}
+
+.widget-rss-item-content img {
+    border-radius: 12px !important;
+    margin-top: 10px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    filter: brightness(0.85); /* 默认稍暗，不刺眼 */
+    transition: filter 0.3s ease;
+}
+
+.widget-rss-item-content img:hover {
+    filter: brightness(1.05); /* 悬停时点亮 */
 }
