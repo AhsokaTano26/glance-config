@@ -1,3 +1,14 @@
+body {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%) fixed; /* 梦幻渐变背景 */
+}
+.widget {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05) !important;
+}
+
 /* 优化卡片外观 */
 .widget {
     background: rgba(255, 255, 255, 0.6) !important;
@@ -58,4 +69,31 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
     transition: all 0.2s ease-in-out;
+}
+/* 搜索栏容器 */
+.search-form {
+    margin-bottom: 2rem !important;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 搜索输入框 */
+.search-bar-input {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 24px !important; /* 椭圆效果，像 Bing 官网一样 */
+    padding: 12px 24px !important;
+    font-size: 1rem !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease;
+}
+
+/* 选中状态 */
+.search-bar-input:focus {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+    border-color: var(--primary-color) !important;
+    outline: none;
 }
